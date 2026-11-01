@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Priya Nair · MBA Fresher · Resume</title>
+<meta name="description" content="Online resume of Priya Nair, MBA (Finance & Marketing) fresher: experience, education, skills and contact.">
+<meta property="og:title" content="Priya Nair · MBA Fresher · Resume">
+<meta property="og:description" content="Experience, education, skills and contact.">
+<meta name="theme-color" content="#0f5e57">
+<link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="bar no-print" role="toolbar" aria-label="Resume actions">
+  <a class="btn primary" id="pdfBtn" download>Download PDF</a>
+  <button class="btn" id="printBtn" type="button">Print</button>
+  <a class="btn" id="mailBtn">Email me</a>
+</div>
+
+<main id="main" class="sheet">
+  <header class="head">
+    <div class="who">
+      <h1 id="name"></h1>
+      <p class="title" id="title"></p>
+      <ul class="contacts" id="contacts"></ul>
+    </div>
+    <div class="photo" id="photo"></div>
+  </header>
+
+  <section class="summary" aria-labelledby="sumH">
+    <h2 id="sumH" class="sr-only">Summary</h2>
+    <p id="summary"></p>
+    <dl class="highlights" id="highlights"></dl>
+  </section>
+
+  <div class="cols">
+    <div class="main-col">
+      <section aria-labelledby="expH"><h2 id="expH">Experience</h2><div id="exp"></div></section>
+      <section aria-labelledby="projH"><h2 id="projH">Projects</h2><div id="proj"></div></section>
+      <section aria-labelledby="eduH"><h2 id="eduH">Education</h2><div id="edu"></div></section>
+    </div>
+    <aside class="side">
+      <section aria-labelledby="skH"><h2 id="skH">Key skills</h2><ul class="tags" id="skills"></ul></section>
+      <section aria-labelledby="ceH"><h2 id="ceH">Certifications</h2><ul class="list" id="certs"></ul></section>
+      <section aria-labelledby="acH"><h2 id="acH">Achievements</h2><ul class="list" id="ach"></ul></section>
+      <section aria-labelledby="laH"><h2 id="laH">Languages</h2><p id="langs"></p></section>
+    </aside>
+  </div>
+
+  <section class="contact no-print" id="contact" aria-labelledby="cH">
+    <h2 id="cH">Get in touch</h2>
+    <form class="form" id="form" novalidate>
+      <div class="f"><label for="fName">Your name</label><input id="fName" autocomplete="name" required></div>
+      <div class="f"><label for="fMail">Your email</label><input id="fMail" type="email" autocomplete="email" required></div>
+      <div class="f full"><label for="fMsg">Message</label><textarea id="fMsg" rows="4" required></textarea></div>
+      <p class="form-err full" id="formErr" role="alert"></p>
+      <div class="full row"><button class="btn primary" type="submit">Send message</button><span class="hint">Opens your email app with the message ready.</span></div>
+    </form>
+  </section>
+</main>
+<footer class="foot no-print"><p id="footNote"></p></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<noscript><p style="text-align:center">This resume needs JavaScript turned on to show its content.</p></noscript>
+<script src="content.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

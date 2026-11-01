@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mira Kapoor · Visual &amp; UI Designer</title>
+<meta name="description" content="Portfolio of Mira Kapoor, visual and UI designer: branding, apps, posters and illustration.">
+<meta property="og:title" content="Mira Kapoor · Visual & UI Designer">
+<meta property="og:description" content="Branding, apps, posters and illustration.">
+<meta name="theme-color" content="#0a0a0c">
+<link rel="preload" href="fonts/spacegrotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav" id="top">
+  <div class="wrap nav-in">
+    <a class="logo" href="#top"><span id="logoName">Portfolio</span><i aria-hidden="true">.</i></a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav aria-label="Main" id="menu" class="menu">
+      <a href="#work">Work</a><a href="#about">About</a><a href="#process">Process</a><a href="#contact" class="nav-cta">Let's talk</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero wrap" aria-labelledby="hTitle">
+    <p class="avail reveal" id="avail"></p>
+    <h1 id="hTitle" class="headline"></h1>
+    <div class="hero-row">
+      <p class="intro reveal" id="intro"></p>
+      <div class="hero-cta reveal">
+        <a class="btn grad" href="#work">See my work</a>
+        <a class="btn ghost" href="#contact">Hire me</a>
+      </div>
+    </div>
+    <div class="blob" aria-hidden="true"></div>
+  </section>
+
+  <div class="marquee" aria-hidden="true"><div class="track" id="marquee"></div></div>
+  <p class="sr-only" id="marqueeSr"></p>
+
+  <section class="wrap section" id="work" aria-labelledby="workH">
+    <div class="sec-head reveal">
+      <h2 id="workH">Selected work</h2>
+      <div class="filters" id="filters" role="group" aria-label="Filter work by category"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section class="wrap section about" id="about" aria-labelledby="aboutH">
+    <div class="about-photo reveal" id="photo"></div>
+    <div class="about-text">
+      <h2 id="aboutH" class="reveal">Hi, I'm <span class="grad-text" id="aboutName"></span></h2>
+      <div id="aboutText" class="reveal"></div>
+      <dl class="numbers reveal" id="numbers"></dl>
+      <ul class="tools reveal" id="tools" aria-label="Tools I use"></ul>
+    </div>
+  </section>
+
+  <section class="wrap section" id="process" aria-labelledby="procH">
+    <h2 id="procH" class="reveal">How I work</h2>
+    <ol class="steps" id="steps"></ol>
+    <div class="quotes" id="quotes"></div>
+  </section>
+
+  <section class="wrap section contact" id="contact" aria-labelledby="contactH">
+    <div class="contact-box reveal">
+      <h2 id="contactH" class="big"></h2>
+      <p id="cText" class="intro"></p>
+      <a class="mail grad-text" id="cEmail"></a>
+      <form class="form" id="form" novalidate>
+        <div class="f"><label for="fName">Name</label><input id="fName" autocomplete="name" required></div>
+        <div class="f"><label for="fMail">Email</label><input id="fMail" type="email" autocomplete="email" required></div>
+        <div class="f full"><label for="fMsg">Project details</label><textarea id="fMsg" rows="4" required></textarea></div>
+        <p class="form-err full" id="formErr" role="alert"></p>
+        <div class="full form-row"><button class="btn grad" type="submit">Send message</button><span class="hint">Opens your email app with the message ready.</span></div>
+      </form>
+      <ul class="socials" id="socials" aria-label="Profiles"></ul>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <p>© <span id="year"></span> <span id="footName"></span> · <span id="loc"></span></p>
+  <p class="muted" id="footNote"></p>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-labelledby="lbTitle">
+  <button class="close" id="lbClose" type="button" aria-label="Close">✕</button>
+  <img id="lbImg" alt="">
+  <div class="lb-text"><p class="lb-cat" id="lbCat"></p><h3 id="lbTitle"></h3><p id="lbDesc"></p></div>
+</dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<noscript><p class="wrap">This portfolio needs JavaScript turned on to show its content.</p></noscript>
+<script src="content.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

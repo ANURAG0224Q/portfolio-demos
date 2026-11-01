@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rohan Verma · CS Student Portfolio</title>
+<meta name="description" content="Portfolio of Rohan Verma, Computer Science student: projects, skills, resume and contact.">
+<meta property="og:title" content="Rohan Verma · CS Student Portfolio">
+<meta property="og:description" content="Projects, skills, resume and contact.">
+<meta name="theme-color" content="#2563eb">
+<link rel="preload" href="fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav" id="top">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" data-bind="name">Portfolio</a>
+    <nav aria-label="Main">
+      <ul class="links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch dark / light mode"><span aria-hidden="true"></span></button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero wrap" aria-labelledby="hName">
+    <div class="hero-text">
+      <p class="pill" id="openToWork"></p>
+      <h1 id="hName"></h1>
+      <p class="role" id="hRole"></p>
+      <p class="intro" id="hIntro"></p>
+      <div class="cta">
+        <a class="btn primary" id="resumeBtn" download>Download resume</a>
+        <a class="btn" href="#contact">Contact me</a>
+      </div>
+      <ul class="socials" id="socials" aria-label="Profiles"></ul>
+    </div>
+    <div class="hero-photo" id="photo"></div>
+  </section>
+
+  <section class="wrap section" id="about" aria-labelledby="aboutH">
+    <h2 id="aboutH"><span class="num">01</span> About</h2>
+    <div class="about-grid">
+      <div id="aboutText"></div>
+      <dl class="stats" id="stats"></dl>
+    </div>
+    <h3 class="sub">Skills</h3>
+    <div class="skills" id="skills"></div>
+  </section>
+
+  <section class="wrap section" id="projects" aria-labelledby="projH">
+    <h2 id="projH"><span class="num">02</span> Projects</h2>
+    <div class="projects" id="projectList"></div>
+  </section>
+
+  <section class="wrap section" id="experience" aria-labelledby="expH">
+    <h2 id="expH"><span class="num">03</span> Experience &amp; Education</h2>
+    <div class="two">
+      <div><h3 class="sub">Experience</h3><ol class="timeline" id="exp"></ol></div>
+      <div><h3 class="sub">Education</h3><ol class="timeline" id="edu"></ol>
+        <h3 class="sub">Achievements</h3><ul class="ach" id="ach"></ul></div>
+    </div>
+  </section>
+
+  <section class="wrap section contact" id="contact" aria-labelledby="contactH">
+    <h2 id="contactH"><span class="num">04</span> <span id="cHeading">Contact</span></h2>
+    <div class="two">
+      <div>
+        <p class="lead" id="cText"></p>
+        <p><a class="email" id="cEmail"></a></p>
+        <button class="btn" type="button" id="copyBtn">Copy email</button>
+      </div>
+      <form class="form" id="form" novalidate>
+        <label for="fName">Your name</label>
+        <input id="fName" name="name" autocomplete="name" required>
+        <label for="fMail">Your email</label>
+        <input id="fMail" name="email" type="email" autocomplete="email" required>
+        <label for="fMsg">Message</label>
+        <textarea id="fMsg" name="message" rows="5" required></textarea>
+        <p class="form-err" id="formErr" role="alert"></p>
+        <button class="btn primary" type="submit">Send message</button>
+        <p class="hint">Opens your email app with the message ready to send.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <p>© <span id="year"></span> <span data-bind="name"></span></p>
+  <p class="muted" id="footNote"></p>
+  <a href="#top" class="muted">Back to top ↑</a>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<noscript><p class="wrap">This portfolio needs JavaScript turned on to show its content.</p></noscript>
+<script src="content.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
